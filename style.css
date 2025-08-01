@@ -315,31 +315,26 @@ footer a {
     display: block;
   }
 }
-/* ====== PARTNERS SECTION ====== */
 .partners-section {
   padding: 40px 0;
   text-align: center;
 }
-
 .partners-section h3 {
   color: #2E3192;
   margin-bottom: 20px;
 }
-
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 20px;
   align-items: center;
 }
-
 .partners-grid img {
   max-width: 120px;
   margin: auto;
   display: block;
   transition: transform 0.3s ease;
 }
-
 .partners-grid img:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
