@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us – SS FINANCE</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            background: #004aad;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #003080;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="images/logo.png" alt="SS Finance Logo">
+    <div>
+        📞 <a href="tel:+918269280424">8269280424</a> | 📧 <a href="mailto:ssfinance2804@gmail.com">ssfinance2804@gmail.com</a>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <div class="dropdown">
+        <button class="dropbtn">Loans ▼</button>
+        <div class="dropdown-content">
+            <a href="personal-loan.html">Personal Loan</a>
+            <a href="home-loan.html">Home Loan</a>
+            <a href="business-loan.html">Business Loan</a>
+            <a href="loan-against-property.html">Loan Against Property</a>
+            <a href="car-loan.html">Car Loan</a>
+            <a href="education-loan.html">Education Loan</a>
+        </div>
+    </div>
+    <a href="loans.html">Our Loan Products</a>
+    <a href="channel-partners.html">Channel Partners</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <p style="text-align:center;">Have questions or need assistance with a loan? Get in touch with us today.  
+    We are here to help you with all your financing needs.</p>
+
+    <div class="contact-info">
+        <p>📞 <strong>Phone:</strong> 8269280424</p>
+        <p>📧 <strong>Email:</strong> ssfinance2804@gmail.com</p>
+    </div>
+
+    <form action="https://formspree.io/f/mexample" method="POST">
+        <label>Your Name</label>
+        <input type="text" name="name" required>
+
+        <label>Your Email</label>
+        <input type="email" name="email" required>
+
+        <label>Your Message</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<footer>
+    &copy; 2025 SS FINANCE. All Rights Reserved.
+</footer>
+
+</body>
+</html>
