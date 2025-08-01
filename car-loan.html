@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Loan – SS FINANCE</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .loan-details {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
-        .loan-details h2 {
-            color: #004aad;
-        }
-        .loan-details ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Loan - SS FINANCE</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-    <img src="images/logo.png" alt="SS Finance Logo">
-    <div>
-        📞 <a href="tel:+918269280424">8269280424</a> | 📧 <a href="mailto:ssfinance2804@gmail.com">ssfinance2804@gmail.com</a>
-    </div>
+  <div class="container nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="SS Finance Logo">
+    </a>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="loans.html" class="active">Loan Products ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="home-loan.html">Home Loan</a></li>
+            <li><a href="personal-loan.html">Personal Loan</a></li>
+            <li><a href="business-loan.html">Business Loan</a></li>
+            <li><a href="car-loan.html" class="active">Car Loan</a></li>
+            <li><a href="loan-against-property.html">Loan Against Property</a></li>
+          </ul>
+        </li>
+        <li><a href="channel-partners.html">Channel Partners</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html" class="loan-btn">Get Loan Now</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-toggle">☰</div>
+  </div>
 </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <div class="dropdown">
-        <button class="dropbtn">Loans ▼</button>
-        <div class="dropdown-content">
-            <a href="personal-loan.html">Personal Loan</a>
-            <a href="home-loan.html">Home Loan</a>
-            <a href="business-loan.html">Business Loan</a>
-            <a href="loan-against-property.html">Loan Against Property</a>
-            <a href="car-loan.html">Car Loan</a>
-            <a href="education-loan.html">Education Loan</a>
-        </div>
-    </div>
-    <a href="loans.html">Our Loan Products</a>
-    <a href="channel-partners.html">Channel Partners</a>
-    <a href="contact.html">Contact Us</a>
-</nav>
+<!-- CAR LOAN CONTENT -->
+<main class="container">
+  <h1>Car Loan</h1>
+  <p>Drive home your dream car with <strong>SS FINANCE</strong> car loans. Whether you’re purchasing a new or used car, we offer the best financing options with attractive interest rates and easy repayment terms.</p>
 
-<div class="container">
-    <div class="loan-details">
-        <h1>Car Loan</h1>
-        <p>Buying your dream car is easier than ever with SS Finance. Whether you are looking for a brand-new car or a reliable used vehicle, we offer car loan solutions that are quick, affordable, and flexible to suit your needs.</p>
+  <h2>Why Choose Our Car Loan?</h2>
+  <ul>
+    <li>✔ Low interest rates for both new and used cars</li>
+    <li>✔ Flexible repayment tenure up to 7 years</li>
+    <li>✔ Quick processing and approval</li>
+    <li>✔ High loan-to-value ratio</li>
+    <li>✔ Financing for both salaried and self-employed individuals</li>
+  </ul>
 
-        <h2>Key Features:</h2>
-        <ul>
-            <li>Loan Amount: ₹1 Lakh to ₹1 Crore</li>
-            <li>Loan for both new and used cars</li>
-            <li>Up to 90% financing of the car’s value</li>
-            <li>Flexible repayment tenure from 12 to 84 months</li>
-            <li>Competitive interest rates from leading banks</li>
-        </ul>
+  <h2>Eligibility Criteria</h2>
+  <p>Applicants must have a stable income and meet the minimum credit score requirements. Both salaried and self-employed individuals can apply.</p>
 
-        <h2>Benefits of Choosing SS Finance:</h2>
-        <p>We work with multiple banks to get you the lowest interest rates and best repayment options. Our team ensures a smooth, transparent process from application to loan approval, so you can drive away in your new car without delay.</p>
+  <h2>Documents Required</h2>
+  <ul>
+    <li>✔ Identity proof</li>
+    <li>✔ Address proof</li>
+    <li>✔ Income proof</li>
+    <li>✔ Car quotation or purchase invoice</li>
+  </ul>
 
-        <p><strong>📞 Call us at 8269280424 or email ssfinance2804@gmail.com to apply for a Car Loan today.</strong></p>
-    </div>
-</div>
+  <p>📞 <a href="tel:8269280424">Call us</a> today or <a href="contact.html">apply online</a> to get started on your car loan.</p>
+</main>
 
+<!-- FOOTER -->
 <footer>
-    &copy; 2025 SS FINANCE. All Rights Reserved.
+  <div class="container">
+    <p>📞 <a href="tel:8269280424">8269280424</a> | ✉️ <a href="mailto:ssfinance2804@gmail.com">ssfinance2804@gmail.com</a></p>
+    <p>© 2025 SS Finance. All rights reserved.</p>
+  </div>
 </footer>
+
+<script>
+  // Mobile menu toggle
+  document.querySelector(".mobile-menu-toggle").addEventListener("click", function(){
+    document.querySelector(".menu").classList.toggle("show");
+  });
+</script>
 
 </body>
 </html>
