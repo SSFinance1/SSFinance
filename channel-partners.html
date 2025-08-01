@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Channel Partners - SS FINANCE</title>
+  <title>SS FINANCE - Channel Partners</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <!-- HEADER -->
-<header>
+<header class="header">
   <div class="container nav-container">
     <a href="index.html" class="logo">
       <img src="images/logo.png" alt="SS Finance Logo">
@@ -33,34 +34,39 @@
         <li><a href="contact.html" class="loan-btn">Get Loan Now</a></li>
       </ul>
     </nav>
-    <div class="mobile-menu-toggle">☰</div>
+    <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
   </div>
 </header>
 
-<!-- CHANNEL PARTNERS CONTENT -->
-<main class="container">
-  <h1>Our Channel Partners</h1>
-  <p>SS FINANCE has strong relationships with leading banks, NBFCs, and insurance companies to ensure our customers receive the best financial solutions in the market.</p>
+<!-- PAGE TITLE -->
+<section class="about container">
+  <h2>Our Channel Partners</h2>
+  <p>We work with trusted banks and insurance providers to bring you the best financial solutions.</p>
+</section>
 
-  <h2>Bank Partners</h2>
-  <ul>
-    <li>🏦 AXIS BANK</li>
-    <li>🏦 YES BANK</li>
-    <li>🏦 HDFC BANK</li>
-    <li>🏦 IDFC FIRST BANK</li>
-    <li>🏦 IDBI BANK</li>
-    <li>🏦 TATA CAPITAL</li>
-  </ul>
+<!-- BANK PARTNERS -->
+<section class="partners-section container">
+  <h3>Bank Partners</h3>
+  <div class="partners-grid">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Axis_Bank_logo.svg" alt="Axis Bank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Yes_Bank_logo.svg" alt="Yes Bank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/HDFC_Bank_Logo.svg" alt="HDFC Bank">
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/b5/Cholamandalam_logo.png" alt="Chola">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/IDFC_First_Bank_logo.svg" alt="IDFC FIRST Bank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/IDBI_Bank_Logo.svg" alt="IDBI Bank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Tata_Capital_logo.svg" alt="Tata Capital">
+  </div>
+</section>
 
-  <h2>Insurance & Aggregator Partners</h2>
-  <ul>
-    <li>🛡 ANDROMEDA</li>
-    <li>🛡 TATA AIA – LIFE INSURANCE</li>
-    <li>🛡 Policy Bazaar</li>
-  </ul>
-
-  <p>With these partnerships, we ensure that our customers have access to competitive interest rates, wide-ranging loan products, and insurance solutions to meet every financial need.</p>
-</main>
+<!-- INSURANCE PARTNERS -->
+<section class="partners-section container">
+  <h3>Insurance & Aggregator Partners</h3>
+  <div class="partners-grid">
+    <img src="https://andromeda.in/wp-content/uploads/2020/09/logo-1.png" alt="Andromeda">
+    <img src="https://upload.wikimedia.org/wikipedia/en/f/f8/Tata_AIA_Life_Insurance_Logo.png" alt="Tata AIA Life Insurance">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/PolicyBazaar_Logo.png" alt="Policy Bazaar">
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -69,6 +75,11 @@
     <p>© 2025 SS Finance. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918269280424" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 <script>
   // Mobile menu toggle
