@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* ====== Basic Reset ====== */
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +6,10 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 .container {
@@ -16,8 +18,8 @@ body {
   margin: auto;
 }
 
-/* Header */
-header {
+/* ====== HEADER ====== */
+.header {
   background: white;
   border-bottom: 2px solid #E30613;
   position: sticky;
@@ -33,7 +35,7 @@ header {
 }
 
 .logo img {
-  height: 50px;
+  height: 55px;
 }
 
 nav ul.menu {
@@ -49,6 +51,7 @@ nav ul.menu li a {
   display: block;
   padding: 10px 15px;
   color: #2E3192;
+  font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -70,7 +73,13 @@ nav ul.menu li a.active {
   background: #c1050f;
 }
 
-/* Dropdown Menu */
+.mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ====== DROPDOWN ====== */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -95,13 +104,199 @@ nav ul.menu li a.active {
   background: #f2f2f2;
 }
 
-/* Mobile Menu */
-.mobile-menu-toggle {
-  display: none;
-  font-size: 22px;
+/* ====== HERO ====== */
+.hero {
+  background: url('https://images.unsplash.com/photo-1565514020179-027b3a8c0b9e') center/cover no-repeat;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-btn {
+  background: #E30613;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-btn:hover {
+  background: #c1050f;
+}
+
+/* ====== ABOUT ====== */
+.about {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.about h2 {
+  color: #2E3192;
+  margin-bottom: 15px;
+}
+
+/* ====== LOAN PRODUCTS ====== */
+.loan-products {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.loan-products h2 {
+  color: #2E3192;
+  margin-bottom: 25px;
+}
+
+.loan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.loan-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.loan-card i {
+  font-size: 28px;
+  color: #E30613;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.loan-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ====== WHY CHOOSE US ====== */
+.why-choose {
+  background: #2E3192;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.why-choose h2 {
+  margin-bottom: 20px;
+}
+
+.why-choose ul {
+  list-style: none;
+}
+
+.why-choose li {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.why-choose i {
+  color: #FFD700;
+  margin-right: 8px;
+}
+
+/* ====== EMI CALCULATOR ====== */
+.emi-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.emi-section input {
+  padding: 10px;
+  margin: 8px;
+  width: 200px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.emi-section button {
+  padding: 10px 20px;
+  background: #E30613;
+  color: white;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
+.emi-section button:hover {
+  background: #c1050f;
+}
+
+.emi-result {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* ====== FOLLOW US ====== */
+.follow-us {
+  background: #0073b1;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+.follow-us a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.follow-us a:hover {
+  color: #FFD700;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #2E3192;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+/* ====== WHATSAPP FLOAT ====== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 14px;
+  font-size: 28px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  background: #1ebe5b;
+}
+
+/* ====== MOBILE MENU ====== */
 @media (max-width: 768px) {
   nav ul.menu {
     display: none;
@@ -119,23 +314,4 @@ nav ul.menu li a.active {
   .mobile-menu-toggle {
     display: block;
   }
-}
-
-/* Main Content */
-main {
-  padding: 20px 0;
-}
-
-/* Footer */
-footer {
-  background: #2E3192;
-  color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 30px;
-}
-
-footer a {
-  color: #FFD700;
-  text-decoration: none;
 }
