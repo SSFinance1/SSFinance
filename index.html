@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SS FINANCE - Home</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <!-- HEADER -->
-<header>
+<header class="header">
   <div class="container nav-container">
     <a href="index.html" class="logo">
       <img src="images/logo.png" alt="SS Finance Logo">
@@ -33,15 +35,71 @@
         <li><a href="contact.html" class="loan-btn">Get Loan Now</a></li>
       </ul>
     </nav>
-    <div class="mobile-menu-toggle">☰</div>
+    <div class="mobile-menu-toggle"><i class="fas fa-bars"></i></div>
   </div>
 </header>
 
-<!-- MAIN CONTENT -->
-<main class="container">
-  <h1>Welcome to SS FINANCE</h1>
-  <p>We offer all types of loan services, insurance plans, and financial solutions with trusted partners like Andromeda, Tata AIA, and Policy Bazaar.</p>
-</main>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Your Trusted Loan & Finance Partner</h1>
+    <p>We provide all types of loan & insurance solutions with top bank partnerships.</p>
+    <a href="contact.html" class="hero-btn">Apply for Loan Now</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about container">
+  <h2>About SS Finance</h2>
+  <p>At SS Finance, we connect you with the best loan and insurance options in the market. With strong partnerships with top banks and insurance providers like Andromeda, Tata AIA, and Policy Bazaar, we ensure you get the best deals with zero service charges.</p>
+</section>
+
+<!-- LOAN PRODUCTS -->
+<section class="loan-products container">
+  <h2>Our Loan Products</h2>
+  <div class="loan-grid">
+    <a href="home-loan.html" class="loan-card"><i class="fas fa-home"></i> Home Loan</a>
+    <a href="personal-loan.html" class="loan-card"><i class="fas fa-user"></i> Personal Loan</a>
+    <a href="business-loan.html" class="loan-card"><i class="fas fa-briefcase"></i> Business Loan</a>
+    <a href="car-loan.html" class="loan-card"><i class="fas fa-car"></i> Car Loan</a>
+    <a href="loan-against-property.html" class="loan-card"><i class="fas fa-building"></i> Loan Against Property</a>
+    <a href="mortgage-loan.html" class="loan-card"><i class="fas fa-file-contract"></i> Mortgage Loan</a>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose">
+  <div class="container">
+    <h2>Why Choose SS Finance?</h2>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> No service charges</li>
+      <li><i class="fas fa-check-circle"></i> Quick loan approval</li>
+      <li><i class="fas fa-check-circle"></i> Multiple bank tie-ups</li>
+      <li><i class="fas fa-check-circle"></i> Transparent process</li>
+      <li><i class="fas fa-check-circle"></i> Expert financial guidance</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EMI CALCULATOR -->
+<section class="emi-section container">
+  <h2>EMI Calculator</h2>
+  <input type="number" id="loanAmount" placeholder="Loan Amount (₹)">
+  <input type="number" id="interestRate" placeholder="Interest Rate (%)" step="0.1">
+  <input type="number" id="loanTenure" placeholder="Loan Tenure (Months)">
+  <button onclick="calculateEMI()">Calculate EMI</button>
+  <div class="emi-result" id="emiResult"></div>
+</section>
+
+<!-- FOLLOW US -->
+<section class="follow-us">
+  <div class="container">
+    <h3>Follow Us</h3>
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/SS_Finance_/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -51,11 +109,34 @@
   </div>
 </footer>
 
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918269280424" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 <script>
   // Mobile menu toggle
   document.querySelector(".mobile-menu-toggle").addEventListener("click", function(){
     document.querySelector(".menu").classList.toggle("show");
   });
+
+  // EMI Calculator Function
+  function calculateEMI() {
+    let loanAmount = document.getElementById("loanAmount").value;
+    let interestRate = document.getElementById("interestRate").value;
+    let loanTenure = document.getElementById("loanTenure").value;
+
+    if (!loanAmount || !interestRate || !loanTenure) {
+      document.getElementById("emiResult").innerText = "Please fill all fields.";
+      return;
+    }
+
+    let monthlyRate = (interestRate / 12) / 100;
+    let emi = (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, loanTenure)) /
+              (Math.pow(1 + monthlyRate, loanTenure) - 1);
+
+    document.getElementById("emiResult").innerText = `Your EMI is ₹${emi.toFixed(2)}`;
+  }
 </script>
 
 </body>
